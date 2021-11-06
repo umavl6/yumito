@@ -1,0 +1,19 @@
+#nav-logo{
+    border-radius: 50%;
+      width: 44px;
+      height: 38px;
+      object-position: center top;
+      object-fit: cover;
+  }
+  .nav-title, .nav-title-to{
+    font-weight: 600;
+    color: white;
+    font-size: 3rem;
+    letter-spacing: .75px;
+  }
+  .nav-title-to{
+    color: yellow;
+  }
+  .full-nav{
+      padding:20px
+  }

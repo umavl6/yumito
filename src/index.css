@@ -1,13 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Varela+Round&display=swap');
+html {
+  scroll-padding-top: 100px; /* height of sticky header */
+} 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Varela Round', sans-serif;
+  background-color: #fff;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+form{
+  max-height: 600px;
+  border-radius: 5px;
+  width:500px;
+  padding:20px 20px;
+  border:3px solid darkslategray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+input[type="text"]{
+  font-size: large;
+}
+a:-webkit-any-link {
+  text-decoration:none !important;
+}
+/* a:hover{
+  text-decoration:underline !important;
+} */
+.btn-lg{
+  padding: 0.6rem 1.5rem;
+  font-size: 1.25rem;
+  border-radius: 2rem;
+}
+.btn-outline-light:hover{
+  background-color:#0d6efd;
+}
+.icon{
+  width:24px;
+  height:24px
+}
+a.hoverMe:hover{
+  text-decoration:underline !important;
+  transform:scale(1.1);
+}
+.infoCardContainer{
+  left: 20%;
+    /* width: 850px;
+    margin:auto; */
+    position: absolute;
+    top: 20%;
+    padding: 20px;
+}
+.loginBar{
+  z-index:10;
+}
+.loggedBar{
+  z-index:2;
+}
+.spinnerBlock{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.spinner-grow {
+  margin:2px;
+  width:1.5rem;
+  height:1.5rem;
+}
+.homeInfoCard{
+  width: 20rem;
+  height: 23rem;
+  margin-left:1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width:501px) and (max-width:730px){
+.deliveryInfo{
+  width:100% !important;
+}
+.checkOutOrderImg{
+  display:none;
+}
+.delTitle, .summaryBill {
+  width:90% !important;
+}
+.nav-link {
+   padding-right: 0rem !important;
+}
+}
+@media screen and (min-width:501px) and (max-width:1100px){
+  .menuCard{
+    width: 420px !important;
+  }
+}
+@media screen and (min-width:501px) and (max-width:622px){
+  .nav-title, .nav-title-to{
+    display:none;
+  }
+  .container-cart {
+      margin: 0 !important;
+  }
+  .homeInfoCard{
+    width: 14rem !important;
+    height: 18rem !important;
+    font-size:10px !important;
+    margin-bottom:.7rem;
+    align-self: flex-end;
+  }
+ .infoCardContainer{
+   flex-direction:column;
+   justify-content:flex-start !important;
+   flex-wrap:nowrap !important;
+    left: 15%;
+    position: absolute;
+    top: 20%;
+    padding: 8px;
+ }
+}
+@media screen and (max-width:991px){
+  .navbar-collapse {
+    background-color: #E9E6ED;
+  }
+  .navbar-toggler{
+    background-color: #E9E6ED;
+  }
+}
+@media screen and (max-width:500px){
+  .form1{
+    transform: scale(.7);
+    top: 9%  !important;
+    left: -8%  !important;
+  }
+  .nav-title, .nav-title-to, .aboutHotel{
+    display:none;
+  }
+  .logincategory{
+    margin:0 !important;
+  }
+  .btn-lg{
+    padding:.4rem !important;
+  }
+  .footerNav{
+    display:none;
+  }
+  .addCart{
+    width:100% !important;
+  }
+  .deliveryInfo{
+    width:100% !important;
+    margin-bottom:0 !important;
+  }
+  .checkOutOrderImg{
+    display:none;
+  }
+  .delTitle, .summaryBill {
+    width:90% !important;
+  }
+ .h4{
+   font-size:large !important;
+   padding:0.5rem;
+ }
+ .cartNav{
+   height:80px !important;
+ }
+ .container-cart {
+width: 0px !important;
+  margin: 0 !important;
+  padding:0px !important;
+}
+.card-img-top {
+  height: 120px !important;
+}
+  .homeInfoCard{
+    width: 14rem !important;
+    height: 18rem !important;
+    font-size:10px !important;
+    margin-bottom:.7rem;
+    align-self: flex-end;
+  }
+ .infoCardContainer{
+   flex-direction:column;
+   justify-content:flex-start !important;
+   flex-wrap:nowrap !important;
+    left: 15%;
+    position: absolute;
+    top: 20%;
+    padding: 8px;
+ }
+ #home-img{
+   height:100%;
+   object-position: right center;
+ }
+}
+.homeInfoCard:hover{
+  box-shadow: 4px 6px 4px gray; 
+  cursor:pointer;
+}
+.card-img-top{
+  height:200px;
+}
+.bi-arrow-right-square{
+  font-size:1.75rem;
+  margin-left:9px;
+  color: darkgreen;
+}
+.offcanvas-start{
+  width:25%;
+}
+.listHotels{
+  width:75%;
+  margin:25%
+}
+.menuCard{
+  box-shadow: -2px 2.5px 5.8px #5a5757;
+  border-radius: 10px;
+  width: 528px;
+  height: 180px;
+  margin: 15px;
+  border: 1px solid #f7f4f4;
+  cursor:pointer;
+}
+.menuCard:hover{
+  transform:scale(1.03);
+  transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; 
+}
+.itemDescription{
+  width:65%;
+  padding:10px;
+}
+.tt{
+  margin-top:.5rem;
+}
+.menuCardImg{
+  /* background-image:url('https://cdn.pixabay.com/photo/2020/05/22/08/17/breakfast-5204352_960_720.jpg'); */
+  width:35%;
+}
+.img-rounded{
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit:cover;
+  height:177px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.greenColor{
+  color:green;
+  padding: .18rem;
+  font-size: 0.75rem;
+  border: 1px solid green;
+  vertical-align: middle;
+  margin-right: .3rem;
+}
+.redColor{
+  color:red;
+  padding: .18rem;
+  font-size: 0.75rem;
+  border: 1px solid red;
+  vertical-align: middle;
+  margin-right: .3rem;
+}
+.yellowColor{
+  color:yellow;
+  padding: .18rem;
+  font-size: 0.75rem;
+  border: 1px solid yellow;
+  vertical-align: middle;
+  margin-right: .3rem;
+}
+.vs{
+  visibility:visible !important;
+}
+.navbar{
+  height: 72px;
+  transition: transform 0.3s;
+}
+.nav-link{
+padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+}
+.nav-item:hover{
+color: #1C2C59;
+border:2px solid #1C2C59;
+}
+.catContainer{
+  position:fixed !important;
+  top:84px;
+  z-index:2;
+  width:100%;
+}
+.menuLayout{
+  padding-bottom: 55px !important;
+  position:absolute;
+  top:100px;
+  min-height:200vh;
+}
+.modal-header{
+  /* z-index:3000; */
+  padding:0px;
+}
+.modal-dialog {
+  max-width: 360px;
+  z-index: 2000;
+}
+.modalImg{
+  display:block;
+  object-fit:cover;
+  height:200px;
+  flex-grow: 1;
+}
+/* #close{
+  position:absolute;
+  top:25%;
+  left:60%;
+  z-index: 3000;
+} */
+.cartNav{
+  position:fixed;
+  bottom:0;
+  right:0;
+  left:0;
+  height:65px;
+  z-index:3000;
+}
+.bi-chevron-double-up{
+  font-size:1.3rem;
+}
+.container-cart{
+  width:94%;
+  margin:0 50px;
+}
+.offcanvas{
+  bottom: 50px;
+}
+.offcanvas-bottom {
+  padding: 10px 58px;
+  height: 50vh;
+}
+.offcanvas-body{
+  padding:0;
+}
+.offcanvas-header{
+  padding:0 1rem;
+}
+.fancyIcon{
+  color:white;
+  font-size:2.5rem;
+  vertical-align:middle;
+  padding-top:10px;
+}
+.dropdown-toggle::after {
+  border:0px;
+}
+.badge{
+  padding: .10em .25em;
+  top:10px;
+  font-size: .75em;
+}
+.footerNav{
+  position:fixed;
+  bottom:0;
+  left:0;
+}
+.deliveryInfo{
+  margin-bottom: 90px;
+  width:50vw;
+}
+.checkOutOrderImg{
+  width: 50vw;
+  object-fit:cover;
+  object-position:center left;
+}
+.delTitle{
+  background-color: honeydew;
+    padding:8px;
+  border:1px solid rgb(100, 130, 185);
+  border-radius: 10px;
+  width:40vw;
+  margin:0px auto !important;
+}
+td{
+  width:28%;
+}
+tr,th,td{
+  padding:5px;
+}
+.totalamt{
+  font-size:20px;
+  font-weight:bold;
+}
+.summaryBill{
+  height:60vh;
+  width:40vw;
+  overflow:auto;
+  margin:10px auto;
+  border:3px dotted rgb(100, 130, 185);
+  background-color: #E9E6ED;
+}
+.beforeh2{
+  height:100px;
+}
+.dealCard{
+  width:320px;
+  margin:3px auto;
 }
